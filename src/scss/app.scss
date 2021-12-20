@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
+@import './sidebar';
+img {
+  max-width: 100%;
+}
+.owl{
+  background: center url(../img/owl.jpg) no-repeat;
+}

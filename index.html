@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task_16</title>
+  <script src="/app.bundle.js" defer></script>
+</head>
+
+<body class="bg-success pt-4 text-success bg-opacity-10">
+  <div class="container w-75">
+    <div class="header mb-4 d-flex align-items-center">
+      
+        <h1>Совообразные Беларуси</h1>
+        <button type="button" class="btn btn-outline-success ms-auto" id="buttonCreatePost">
+          Добавить новый вид
+        </button>
+    
+    </div>
+
+    <div class="row">
+      <div class="col-3">
+        <div class="sidebar" style="min-height: 500px" id="posts">
+        </div>
+      </div>
+
+      <div class="col-9">
+        <div class="sidebar owl" style="min-height: 700px" id="owl">
+          <div class="sidebar__item" id="post">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="formModal" data-bs-backdrop="static" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Форма статьи</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="form" method="POST">
+            <input type="hidden" name="id" id="id">
+            <input type="hidden" name="date" id="date">
+            <div class="mb-3">
+              <label for="title" class="form-label">Название</label>
+              <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="mb-3">
+              <label for="latin" class="form-label">Латинское название</label>
+              <input type="text" class="form-control" id="latin" name="latin">
+            </div>
+            <div class="mb-3">
+              <label for="photo" class="form-label">URL фото</label>
+              <input class="form-control" id="photo"  name="photo"></input>
+            </div>
+            <div class="mb-3">
+              <label for="content" class="form-label">Содержание</label>
+              <textarea class="form-control" id="content" rows="8" name="content"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Закрыть</button>
+          <button type="submit" class="btn btn-outline-success" form="form">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
